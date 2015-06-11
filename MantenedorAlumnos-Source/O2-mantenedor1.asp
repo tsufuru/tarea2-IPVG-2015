@@ -13,7 +13,7 @@ Set REG1 = Conn.execute(SQL)
 </head>
 
 <body>
-<form method="get" action="mantenedor2.asp" name="form1">
+
  <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr align="center" valign="middle"> 
               <td width="10%" height="10" bgcolor="#ffffff"></td>
@@ -63,7 +63,9 @@ Set REG1 = Conn.execute(SQL)
 				Conn.close
 			%>
           </table>
-		  <input type="submit" value="Insertar">
-		  </form>
+		  <a href="O2-mantenedor2.asp">
+			<input type="button" value="Insertar">
+		  </a>
+
 </body>
 </html>
