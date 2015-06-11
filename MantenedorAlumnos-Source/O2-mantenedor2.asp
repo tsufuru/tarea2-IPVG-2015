@@ -69,6 +69,14 @@ function volver()
 				<input type="text" name="MAIL" size="60" maxlength="50" class="texto">         
 			</td>
 		</tr>
+		<tr> 
+			<td height="25" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+				<font face="Verdana, Arial, Helvetica, sans-serif">DIRECCION</font> 
+			</td>
+			<td>
+				<input type="text" name="DIRECCION" size="60" maxlength="50" class="texto">          
+			</td>
+		</tr>
 	</table>
     <input type="submit" value="Insertar">
 	<input type="button" value="Volver" onclick="volver()">
