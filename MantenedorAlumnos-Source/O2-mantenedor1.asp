@@ -34,7 +34,9 @@ Set REG1 = Conn.execute(SQL)
               <td width="34%" valign=top> 
                 <div align="center"><b><font size="1" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">MAIL</font></b></div>
               </td>
-             
+			  <td width="34%" valign=top> 
+                <div align="center"><b><font size="1" color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">DIRECCION</font></b></div>
+              </td>               
             </tr>
             <% 
 				do While not REG1.eof
@@ -54,6 +56,12 @@ Set REG1 = Conn.execute(SQL)
                 <div align="left"><font face="Arial, Helvetica, sans-serif" size="1">
 					<%=REG1("MAIL")%>
 				</font></div>
+              </td>
+			  <td width="42%" valign=top> 
+                <div align="left"><font face="Arial, Helvetica, sans-serif" size="1">
+					<%=REG1("DIRECCION")%>
+				</font>
+				</div>
               </td>
             </tr>
             <% 
