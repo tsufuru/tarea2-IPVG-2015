@@ -11,10 +11,10 @@ if REQUEST.FORM <> "" then
 	
 	if (RUT<>"" and NOMBRES<>"" and MAIL<>"" and DIRECCION<>"") then
 		
-		SQL = "INSERT INTO mantencion.dbo.alumnos " & _
-			"(RUT, NOMBRES, MAIL) " & _
+		SQL = "INSERT INTO dbo.alumnos " & _
+			"(RUT, NOMBRE, MAIL, DIRECCION) " & _
 			"VALUES " & _
-			"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
+	  		"('" & RUT & "', '" & NOMBRES & "', '" & MAIL & "', '" & DIRECCION & "')" 
 			
 		Conn.execute(SQL)
 		
