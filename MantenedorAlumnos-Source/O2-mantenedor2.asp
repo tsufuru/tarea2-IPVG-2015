@@ -1,21 +1,31 @@
-<%Set Conn= Server.CreateObject("ADODB.connection")
-Conn.open "DSN=dsnalumnos;UID=invitado;PWD=2015;DATABASE=mantencion"
-	RUT = REQUEST.QUERYSTRING("RUT") 		
-	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
-	MAIL = REQUEST.QUERYSTRING("MAIL")
+<%
+if REQUEST.FORM <> "" then
+
+	Set Conn= Server.CreateObject("ADODB.connection")
+	Conn.open "DSN=dsnalumnos;UID=invitado;PWD=2015;DATABASE=mantencion"
 	
-	if (RUT<>"") then
+	RUT = REQUEST.FORM("RUT") 		
+	NOMBRES = REQUEST.FORM("NOMBRES")
+	MAIL = REQUEST.FORM("MAIL")
+	DIRECCION = REQUEST.FORM("DIRECCION")
 	
-	
-	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
-				"(RUT, NOMBRES, MAIL) " & _
-				"VALUES " & _
-				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
-			Conn.execute(SQL)
-			RUT = ""
-			NOMBRES = ""
-			MAIL = ""
+	if (RUT<>"" and NOMBRES<>"" and MAIL<>"" and DIRECCION<>"") then
+		
+		SQL = "INSERT INTO mantencion.dbo.alumnos " & _
+			"(RUT, NOMBRES, MAIL) " & _
+			"VALUES " & _
+			"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
+			
+		Conn.execute(SQL)
+		
+		RUT = ""
+		NOMBRES = ""
+		MAIL = ""
+		DIRECCION = ""
+		
 	end if
+	
+end if
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
