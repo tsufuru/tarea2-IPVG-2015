@@ -44,24 +44,34 @@ function volver()
 <body>
 
 <form method="post" action="O2-mantenedor2.asp" name="form1">
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
-             
-    <tr align="center" valign="middle"> 
-        <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Verdana,Arial, Helvetica, sans-serif" size="1">RUT 
-                <input type="text" name="RUT" maxlength="5" size="15" class="texto">
-                <font face="Verdana, Arial, Helvetica, sans-serif">NOMBRES</font> 
-                <input type="text" name="NOMBRES" size="60" maxlength="50" class="texto">
-                </font></b></td>
-            </tr>
-            <tr align="center" valign="middle">
-              <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Arial, Helvetica, sans-serif" size="1"><font face="Verdana, Arial, Helvetica, sans-serif">MAIL</font> 
-                <input type="text" name="MAIL" size="60" maxlength="50" class="texto">              
-                
-                </font></b></td>
-            </tr>
-          </table>
-		  <input type="submit" value="Insertar">
-		  <input type="button" value="Volver" onclick="volver()">
-		</form>
+	<table border="0" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
+		<tr> 
+			<td height="25" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+				<font face="Verdana, Arial, Helvetica, sans-serif">RUT</font>
+			</td>
+			<td>
+				<input type="text" name="RUT" maxlength="20" size="20" class="texto"> 
+			</td>
+		</tr>
+		<tr> 
+			<td height="25" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+				<font face="Verdana, Arial, Helvetica, sans-serif">NOMBRES</font> 
+			</td>
+			<td>
+				<input type="text" name="NOMBRES" size="60" maxlength="50" class="texto">
+			</td>
+		</tr>
+		<tr> 
+			<td height="25" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+				<font face="Verdana, Arial, Helvetica, sans-serif">MAIL</font> 
+			</td>
+			<td>
+				<input type="text" name="MAIL" size="60" maxlength="50" class="texto">         
+			</td>
+		</tr>
+	</table>
+    <input type="submit" value="Insertar">
+	<input type="button" value="Volver" onclick="volver()">
+</form>
 </body>
 </html>
