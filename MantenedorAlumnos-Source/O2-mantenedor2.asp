@@ -34,7 +34,7 @@ function volver()
 
 <body>
 
-<form method="get" action="mantenedor2.asp" name="form1">
+<form method="post" action="O2-mantenedor2.asp" name="form1">
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
              
     <tr align="center" valign="middle"> 
