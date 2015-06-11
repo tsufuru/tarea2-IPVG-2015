@@ -1,10 +1,9 @@
 <%
 Set Conn= Server.CreateObject("ADODB.connection")
 Conn.open "DSN=dsnalumnos;UID=invitado;PWD=2015;DATABASE=mantencion"
-SQL = "SELECT RUT, NOMBRE, MAIL " & _
-			"FROM mantencion.dbo.alumnos " & _
-			" ORDER BY NOMBRE"
-		Set REG1 = Conn.execute(SQL)
+
+SQL = "SELECT * FROM dbo.alumnos ORDER BY NOMBRE"
+Set REG1 = Conn.execute(SQL)
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
